@@ -22,7 +22,7 @@ function barChart(sample) {
 
     //creating the bar chart
     let trace1 = {
-        //slicing the data to only dislay the first 10 bacteria
+        //slicing the data to only dislay the first 10 bacteria and sorting the graph from largest to smallest
         x: sample_values.slice(0,10).reverse(),
         y: otu_ids.slice(0,10).map(id => `OTU ${id}`).reverse(),
         text: otu_labels.slice(0,10).reverse(),

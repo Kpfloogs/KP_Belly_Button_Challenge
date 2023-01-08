@@ -39,7 +39,7 @@ function barChart(sample) {
 // bar chart function
 
 function bubbleChart(sample) {
-    d3.json(url).then(function(data) {
+    d3.json(url).then((data) => {
     let plotData = data.samples;
     let plotID = plotData.filter(sampleID => sampleID.id == sample)[0];
 
@@ -68,7 +68,7 @@ function bubbleChart(sample) {
 
 function demoBox(sample) {
     // retrieving data, similar to the graphs
-    d3.json(url).then(function(data) {
+    d3.json(url).then((data) => {
         let demoData = data.metadata;
         let demoID = demoData.filter(sampleID => sampleID.id == sample)[0];
 
@@ -91,7 +91,7 @@ function updateDash() {
     let dropdownMenu = d3.select('#selDataset');
 
     //retrieving the data from the "names" array
-    d3.json(url).then(function(data) {
+    d3.json(url).then((data) => {
         let nameIDs = data.names;
         //iterating through all the IDs
         nameIDs.forEach((ID) => {
